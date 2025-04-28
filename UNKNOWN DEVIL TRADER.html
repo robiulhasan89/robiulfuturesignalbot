@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unknown Devil Trader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container" id="login-page">
+        <h1>Login to Unknown Devil Trader</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <button type="submit">LOGIN</button>
+        </form>
+
+        <div class="profile-image">
+            <a href="https://t.me/+hClQYvLYf1U1NjBl" target="_blank">
+                <img src="photo_2024-12-29_05-37-59.jpg" alt="Unknown Devil Trader" />
+            </a>
+        </div>
+    </div>
+
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <p>Generating Signals...</p>
+    </div>
+
+    <div class="container" id="main-page" style="display:none;">
+        <h1>Unknown Devil Trader</h1>
+        <div id="live-clock" class="clock"></div>
+        <div class="card">
+            <h2 class="section-title">Generate Trading Signals</h2>
+            <div>
+                <label for="asset-select">Select Asset</label>
+                <select id="asset-select">
+                    <option value="EUR/JPY">EUR/JPY</option>
+                    <option value="EUR/USD">EUR/USD</option>
+                    <option value="USD/JPY">USD/JPY</option>
+                    <option value="EUR/GBP">EUR/GBP</option>
+                    <option value="USD/EGP (OTC)">USD/EGP (OTC)</option>
+                    <option value="BRL/USD (OTC)">BRL/USD (OTC)</option>
+                    <option value="USD/TRY (OTC)">USD/TRY (OTC)</option>
+                    <option value="USD/PKR (OTC)">USD/PKR (OTC)</option>
+                    <option value="USD/PHP (OTC)">USD/PHP (OTC)</option>
+                    <option value="USD/INR (OTC)">USD/INR (OTC)</option>
+                    <option value="USD/ARS (OTC)">USD/ARS (OTC)</option>
+                    <option value="USD/MXN (OTC)">USD/MXN (OTC)</option>
+                    <option value="NZD/JPY (OTC)">NZD/JPY (OTC)</option>
+                    <option value="USD/DZD (OTC)">USD/DZD (OTC)</option>
+                    <option value="USD/BDT (OTC)">USD/BDT (OTC)</option>
+                    <option value="Bitcoin (OTC)">Bitcoin (OTC)</option>
+                    <option value="FACEBOOK INC (OTC)">FACEBOOK INC (OTC)</option>
+                    <option value="Microsoft (OTC)">Microsoft (OTC)</option>
+                </select>
+            </div>
+            <div>
+                <label for="signal-count">Number of Signals</label>
+                <input type="number" id="signal-count" value="10" min="1" max="30" />
+            </div>
+            <div>
+                <label for="filter-select">Signal Type</label>
+                <select id="filter-select">
+                    <option value="ALL">All</option>
+                    <option value="UP">UP</option>
+                    <option value="DOWN">DOWN</option>
+                </select>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" id="backtest-filter" /> Filter Backtested Signals (99% Accuracy)
+                </label>
+            </div>
+            <button id="generate-signals">Generate Signals</button>
+        </div>
+        <div class="signal-list" id="signal-list"></div>
+        <div class="animation-message">Signals generated successfully!</div>
+    </div>
+
+    <footer>
+        <p class="footer-text">
+            &copy; Unknown Devil Trader | 
+            <a href="https://t.me/+hClQYvLYf1U1NjBl" target="_blank">Join Our Telegram</a>
+        </p>
+    </footer>
+
+    <audio id="click-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_6b8e2cfa56.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

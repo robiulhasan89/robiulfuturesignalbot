@@ -1,0 +1,221 @@
+/* style.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Style */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Login Page Style */
+.login-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 30px;
+    animation: fadeIn 2s ease forwards;
+}
+
+/* Profile Image Style */
+.profile-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00c6ff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Form Inputs */
+.login-container input, .login-container button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.login-container button {
+    background: #00c6ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: #0072ff;
+    transform: scale(1.05);
+}
+
+/* Loader */
+.loader {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    border-top: 8px solid #00c6ff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Main Page */
+.container {
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px;
+    text-align: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #00c6ff;
+}
+
+/* Inputs and Selects */
+select, input[type="number"] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0072ff;
+    transform: scale(1.05);
+}
+
+/* Signals List */
+.signal-list {
+    margin-top: 20px;
+}
+
+.signal-item {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.signal-item:hover {
+    background: rgba(0, 198, 255, 0.2);
+}
+
+/* Animation Message */
+.animation-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #00ff99;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.animation-message.show {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Live Clock */
+.clock {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00ff99;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
